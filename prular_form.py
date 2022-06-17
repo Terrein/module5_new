@@ -1,4 +1,4 @@
-def prular_form(count, word_1,word2 = '',word3 = ''):
+def plural_form(count, word_1,word2 = '',word3 = ''):
     """ возвращает корректную форму существительного
     в зависимости от переданного числа
     :param count: количество 
