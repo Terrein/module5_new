@@ -15,4 +15,4 @@ def plural_form(count, word_1,word2 = '',word3 = ''):
     translite_result = translit(result, 'ru', reversed = True)
     return translite_result
 
-print(prular_form (115,'студентов'))
+print(plural_form (115,'студентов'))
