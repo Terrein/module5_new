@@ -31,8 +31,6 @@ def plural_form(number, form_1, form_2, form_3):
         nessesary_form = form_3
     return(f'{number} { nessesary_form}')
 
-print(plural_form(5, 'яблоко', 'яблока', 'яблок'))
-
 
 # Декоратор html
 def html(*args,**kwargs):
