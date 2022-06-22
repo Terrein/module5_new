@@ -13,22 +13,25 @@ def fizz_buzz(begin_range,end_range):
 
 
 # Функция plural_form
-def plural_form(count, word_1,word2 = '',word3 = ''):
-    """ возвращает корректную форму существительного
-    в зависимости от переданного числа
-    :param count: количество 
-    :param word_1: слово для анализа
-    :param word_2: другая форма слова (необязательный атрибут)
-    :param word_3: другая форма слова (необязательный атрибут)
+def plural_form(number, form_1, form_2, form_3):
+    """ Согласование окончаний  числительный множественного числа. 
+    :param number: кол-во объектов
+    :param form_1: форма единственного числа
+    :param form_2: форма множественного числа до 4 объектов
+    :param form_3: форма множественного числа от 5 объектов
     """
-    from pymorphy2 import MorphAnalyzer
-    from transliterate import translit
-    morph = MorphAnalyzer()
-    expample_word = morph.parse(word_1)[0].normal_form
-    transform_word = morph.parse(expample_word)[0]
-    result = transform_word.make_agree_with_number(count).word
-    translite_result = translit(result, 'ru', reversed = True)
-    return translite_result
+
+    if number % 100 in (11, 12, 13, 14):
+         nessesary_form = form_3
+    elif number % 10 == 1:
+        nessesary_form = form_1
+    elif number % 10 in (2, 3, 4):
+        nessesary_form = form_2
+    else:
+        nessesary_form = form_3
+    return(f'{number} { nessesary_form}')
+
+print(plural_form(5, 'яблоко', 'яблока', 'яблок'))
 
 
 # Декоратор html
