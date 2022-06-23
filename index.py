@@ -29,7 +29,7 @@ def plural_form(number, form_1, form_2, form_3):
         nessesary_form = form_2
     else:
         nessesary_form = form_3
-    return(f'{number} { nessesary_form}')
+    return(f'{ nessesary_form}')
 
 
 # Декоратор html
