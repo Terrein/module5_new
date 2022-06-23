@@ -35,7 +35,7 @@ def plural_form_old(number, form_1, form_2, form_3):
         nessesary_form = form_2
     else:
         nessesary_form = form_3
-    return(f'{number} { nessesary_form}')
+    return(f'{ nessesary_form}')
 
 print(1, plural_form_old(1, 'яблоко', 'яблока', 'яблок'))
 print(3, plural_form_old(3, 'яблоко', 'яблока', 'яблок'))
